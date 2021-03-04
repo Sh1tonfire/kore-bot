@@ -1,4 +1,4 @@
-import {admins} from "./config.js";
+import {admins} from "./../config.js";
 
 let commands = {};
 for(let c of Deno.readDirSync("./commands")){
