@@ -10,7 +10,7 @@ export default {
         let mfile = null;
         for await(let f of Deno.readDir("./files/gen")){
             if(f.name.substring(0, f.name.lastIndexOf(".")) === args[0]){
-                mfile = file("./files/gen" + f.name, "text/plain");
+                mfile = file("./../files/gen" + f.name, "text/plain");
             }
         }
         for(let r in repos){
