@@ -1,3 +1,4 @@
+import {sendMessage} from "https://deno.land/x/discordeno/mod.ts";
 import {admins} from "./../config.js";
 
 let commands = {};
@@ -22,5 +23,6 @@ export default {
                 cmds.push(c);
             }
         }
+        sendMessage(message.channelID, cmds.toString());
     }
 };
