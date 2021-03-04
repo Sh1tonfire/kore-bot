@@ -18,11 +18,11 @@ for(let c of Deno.readDirSync("./commands")){
 
 let repos = {
     mindustry: {
-        url: "https://github.com/Anuken/Mindustry/blob/master/",
+        link: "https://github.com/Anuken/Mindustry/blob/master/",
         api: await fetch("https://api.github.com/repos/Anuken/Mindustry/git/trees/master?recursive=true").then(f => f.json())
     },
     arc: {
-        url: "https://github.com/Anuken/Arc/blob/master/",
+        link: "https://github.com/Anuken/Arc/blob/master/",
         api: await fetch("https://api.github.com/repos/Anuken/Arc/git/trees/master?recursive=true").then(f => f.json())
     }
 };
