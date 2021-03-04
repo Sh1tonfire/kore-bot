@@ -5,6 +5,6 @@ export default {
     admin: true,
     async run(args, message){
         await sendMessage(message.channelID, "restarting...");
-        Deno.exit(123);
+        Deno.exit();
     }
 }

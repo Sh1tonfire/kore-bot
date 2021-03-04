@@ -1,8 +1,5 @@
 import {sendMessage} from "https://deno.land/x/discordeno/mod.ts";
-
-let admins = [
-    "382853907031916544"
-];
+import {admins} from "./config.js";
 
 let commands = {};
 for(let c of Deno.readDirSync("./commands")){
