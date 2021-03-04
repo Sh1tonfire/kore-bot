@@ -17,9 +17,9 @@ export default {
     run(args, message){
         let cmds = [];
         for(let c in commands){
-            if(commands[c].admin && admins.includes(message.author.id)){
+            if(!commands[c].admin){
                 cmds.push(c);
-            }else{
+            }else if(admins.includes(m.author.id)){
                 cmds.push(c);
             }
         }
