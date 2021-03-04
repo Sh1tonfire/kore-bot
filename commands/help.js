@@ -4,11 +4,6 @@ import {
     commands
 } from "./../config.js";
 
-let command = {
-    name: "help",
-    admin: false,
-};
-
 export default {
     name: "help",
     admin: false,
