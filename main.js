@@ -16,7 +16,7 @@ startBot({
             console.log("bot up");
             try{
                 await sendMessage(await Deno.readTextFile("./restart.txt"), "done");
-                Deno.writeTextFile("./restart.txt", "");
+                Deno.writeTextFile("./restart.txt", "731033393072046091");
             }catch{}
         },
         messageCreate: parseMessage
