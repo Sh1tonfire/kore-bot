@@ -15,7 +15,7 @@ startBot({
         async ready(){
             console.log("bot up");
             try{
-                sendMessage(Deno.readTextFile("./restart.txt"), "done");
+                sendMessage(await Deno.readTextFile("./restart.txt"), "done");
             }catch{}
             Deno.writeTextFile("./restart.txt", "");
         },
