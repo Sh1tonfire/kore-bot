@@ -11,7 +11,7 @@ export default {
                 if(e.type === "tree") return;
                 let filename = e.path.substring(e.path.lastIndexOf("/") + 1, e.path.lastIndexOf("."));
                 if(args[0] === filename){
-                    result += "<" + r.link + e.path + ">\n";
+                    result += "<" + r.url + e.path + ">\n";
                 }
             });
         }
