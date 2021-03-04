@@ -6,6 +6,9 @@ export default {
     admin: false,
     async run(args, message){
         let result = "";
+        for await(let f in Deno.readDir("./files/gen")){
+            console.log(f);
+        }
         for(let r in repos){
             repos[r].api.tree.forEach(e => {
                 if(e.type === "tree") return;
