@@ -1,6 +1,9 @@
-import {startBot} from "https://deno.land/x/discordeno/mod.ts";
-import {token} from "./token.js";
+import {
+    startBot,
+    sendMessage
+} from "https://deno.land/x/discordeno/mod.ts";
 
+import {token} from "./token.js";
 import parseMessage from "./core/parser.js";
 
 startBot({
@@ -11,7 +14,9 @@ startBot({
     eventHandlers: {
         async ready(){
             console.log("bot up");
-            sendMessage(Deno.readTextFile("./restart.txt"));
+            try{
+                sendMessage(Deno.readTextFile("./restart.txt"), "done");
+            }catch{}
             Deno.writeTextFile("./restart.txt", "");
         },
         messageCreate: parseMessage
