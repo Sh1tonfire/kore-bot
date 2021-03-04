@@ -5,4 +5,3 @@ function file(path, type){
     };
     return file;
 }
-
