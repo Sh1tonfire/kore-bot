@@ -5,3 +5,7 @@ function file(path, type){
     };
     return file;
 }
+
+export {
+    file
+};
