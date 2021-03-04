@@ -4,16 +4,10 @@ let admins = [
 
 let commands = {};
 for(let c of Deno.readDirSync("./commands")){
-    try{
-        import("./commands/" + c.name).then(e => {
-            commands[e.default.name] = {
-                admin: e.default.admin,
-                run: e.default.run
-            };
-        });
-    }catch(err){
-        console.log(err);
-    }
+    import("./commands/" + c.name).then(e => {
+        let {name, admin, run} = e.default;
+        commands[name] = {admin, run};
+    }).catch(console.log);
 }
 
 let repos = {
