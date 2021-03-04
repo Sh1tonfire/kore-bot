@@ -19,7 +19,7 @@ export default {
         for(let c in commands){
             if(!commands[c].admin){
                 cmds.push(c);
-            }else if(admins.includes(m.author.id)){
+            }else if(admins.includes(message.author.id)){
                 cmds.push(c);
             }
         }
