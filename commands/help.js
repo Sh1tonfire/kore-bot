@@ -1,15 +1,8 @@
 import {sendMessage} from "https://deno.land/x/discordeno/mod.ts";
-import {admins} from "./../config.js";
-
-let commands = {};
-for(let c of Deno.readDirSync("./commands")){
-    import("./../commands/" + c.name).then(e => {
-        commands[e.default.name] = {
-            admin: e.default.admin,
-            run: e.default.run
-        };
-    });
-}
+import {
+    admins,
+    commands
+} from "./../config.js";
 
 export default {
     name: "help",

@@ -11,6 +11,8 @@ startBot({
     eventHandlers: {
         async ready(){
             console.log("bot up");
+            sendMessage(Deno.readTextFile("./restart.txt"));
+            Deno.writeTextFile("./restart.txt", "");
         },
         messageCreate: parseMessage
     }
